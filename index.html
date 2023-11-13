@@ -12,10 +12,10 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container border border-secondary rounded">
     <div class="row">
       <div class="col-sm-12">
-        <h3 class="mb-3">Payment form example</h3> <!-- HEAD -->
+        <h3 class="mb-3 bg-light">Payment form example</h3> <!-- HEAD OJO FALTA LINEA INFERIOR -->
         <form>
           <div class="row error"> <!-- ESPACIO ERROR -->
             <div class="col-sm-12">
@@ -23,20 +23,20 @@
             </div>
           </div>
           <div class="row g-3"> <!-- PRIMERA FILA -->
-            <div class="col-md-5">
+            <div class="col-sm-5">
               <label for="card" class="form-label">Card #</label>
               <input type="text" class="form-control" id="card" name="card" required>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <label for="cvc" class="form-label">CVC #</label>
               <input type="text" class="form-control" id="cvc" name="cvc" required>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4">
               <label for="amount" class="form-label">Amount</label>
-              <i class="fa-dollar-sign fa-solid "></i> <!-- REVISAR DISPLAY PORQUE SE VE ARRIBA EN EL LABEL -->
+              <i class="fa-euro-sign fa-solid"></i> <!-- REVISAR DISPLAY PORQUE SE VE ARRIBA EN EL LABEL -->
               <input type="text" class="form-control" id="amount" name="amount" required>
             </div>
-            <div class="col-md-6"> <!-- SEGUNDA FILA -->
+            <div class="col-sm-6"> <!-- SEGUNDA FILA -->
               <label for="first-name" class="form-label">First Name</label>
               <input type="email" class="form-control" id="first-name" name="first-name" required>
             </div>
@@ -44,11 +44,11 @@
               <label for="last-name" class="form-label">Last Name</label>
               <input type="text" class="form-control" id="last-name" name="last-name">
             </div>
-            <div class="col-md-6"> <!-- TERCERA FILA -->
+            <div class="col-sm-6"> <!-- TERCERA FILA -->
               <label for="city" class="form-label">City</label>
               <input type="text" class="form-control" id="city" name="city" required>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <label for="state" class="form-label">State</label>
               <select name="state" id="state"> <!-- REVISAR DROPDOWN -->
                 <option value="green">green</option>
@@ -57,22 +57,35 @@
               </select>
               <input type="text" class="form-control" id="state" name="state" required> <!-- INPUT EXTRA QUITAR? -->
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <label for="postal-code" class="form-label">Postal code</label>
               <input type="text" class="form-control" id="postal-code" name="postal-code" required>
+            </div> <!-- PENDIENTE AGREGAR ROW PARA EL d-flex justify-content-end ? -->
+            <div class="col-sm-3"> <!-- CUARTA FILA -->
+              <label for="payment-type" class="form-label">We accept: </label>
+              <div class="bg-secondary rounded">
+                <input type="radio" name="cardtype" value="" /> <i class="fa-brands fa-cc-visa"
+                  style="color: #ffffff;"></i>
+                <input type="radio" name="cardtype" value="" /> <i class="fa-brands fa-cc-mastercard"
+                  style="color: #ffffff;"></i>
+                <input type="radio" name="cardtype" value="" /> <i class="fa-brands fa-cc-amex"
+                  style="color: #ffffff;"></i>
+                <input type="radio" name="cardtype" value="" /> <i class="fa-regular fa-credit-card"
+                  style="color: #ffffff;"></i>
+              </div>
             </div>
-            <div class="col-md-6">
-              <label for="message" class="form-label">We accept: </label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+              <p class="mt-1">Add any notes here.</p>
             </div>
             <div class="col-12">
               <div class="row">
-                <div class="col-md-6">
-                  <button data-res="<?php echo $sum; ?>" type="submit" class="btn btn-dark w-100 fw-bold">Send</button>
+                <div class="col-sm-12 d-flex">
+                  <button data-res="<?php echo $sum; ?>" type="cancel"
+                    class="btn btn-secondary w-100 fw-bold">Cancel</button>
+                  <button data-res="<?php echo $sum; ?>" type="submit"
+                    class="btn btn-primary w-100 fw-bold">Send</button>
                 </div>
               </div>
             </div>
