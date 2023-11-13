@@ -49,13 +49,13 @@
               <input type="text" class="form-control" id="city" name="city" required>
             </div>
             <div class="col-sm-3">
-              <label for="state" class="form-label">State</label>
-              <select name="state" id="state"> <!-- REVISAR DROPDOWN -->
-                <option value="green">green</option>
-                <option value="blue">blue</option>
-                <option value="brown">brown</option>
+              <label for="state" class="form-label">State</label> <!-- REVISAR DROPDOWN 2-->
+              <select class="form-select" id="state" required>
+                <option selected disabled value="">Pick a state</option>
+                <option>Madrid</option>
+                <option>Valencia</option>
+                <option>Catalunya</option>
               </select>
-              <input type="text" class="form-control" id="state" name="state" required> <!-- INPUT EXTRA QUITAR? -->
             </div>
             <div class="col-sm-3">
               <label for="postal-code" class="form-label">Postal code</label>
