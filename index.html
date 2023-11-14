@@ -23,23 +23,29 @@
           <div class="card-body p-3">
             <div class="row error"> <!-- ESPACIO ERROR -->
               <div class="col-sm-12">
-                <p> ERROR ALERT </p><!-- AQUI ESPACIO PARA ERROR EN CASO DE NECESITARLO -->
+                <span class="errorAlert">
+                  <!-- AQUI ESPACIO PARA ERROR EN CASO DE NECESITARLO D-NONE DE MOMENTO-->
+                  <div class="alert alert-danger" role="alert">
+                    Some fields are missing.
+                  </div>
+                </span>
               </div>
             </div>
             <div class="row g-3"> <!-- PRIMERA FILA -->
               <div class="col-sm-5">
                 <label for="card" class="form-label">Card #</label>
-                <input type="text" class="form-control" id="card" placeholder="XXX" name="card" required>
+                <input type="number" class="form-control" id="card" placeholder="XXXX-XXXX-XXXX-XXX" name="card"
+                  maxlength="19" required>
               </div>
               <div class="col-sm-3">
                 <label for="cvc" class="form-label">CVC #</label>
-                <input type="text" class="form-control" id="cvc" placeholder="XXX" name="cvc" required>
+                <input type="number" class="form-control" id="cvc" placeholder="XXX" name="cvc" maxlength="3" required>
               </div>
               <div class="col-sm-4">
                 <label for="amount" class="form-label">Amount</label>
                 <div class="input-group">
                   <span class="input-group-text">€</span>
-                  <input type="text" class="form-control" id="amount" placeholder="Amount 0,00"
+                  <input type="number" class="form-control" id="amount" placeholder="Amount 0,00"
                     aria-label="Euro amount (with dot and two decimal places)" required>
                 </div>
               </div>
@@ -101,7 +107,7 @@
           <div class="card-footer p-3">
             <div class="col-12 ">
               <div class="row justify-content-end">
-                <div class="col-2 p-2 d-flex">
+                <div class="col-2 d-flex">
                   <button data-res="<?php echo $sum; ?>" type="reset"
                     class="btn btn-secondary m-1 w-100 fw-bold">Cancel</button>
                   <button data-res="<?php echo $sum; ?>" type="submit"
