@@ -10,7 +10,3 @@ body {
   input[type="number"] {
     -moz-appearance: textfield;
   }
-
-  #card:invalid + .errorAlert::after {
-    content: "Required your first name";
-}
