@@ -19,11 +19,11 @@
         <div class="card-header p-3">
           <h3 class="mb-0">Payment form example</h3> <!-- HEAD OJO FALTA LINEA INFERIOR -->
         </div>
-        <form>
+        <form id="miFormulario" >
           <div class="card-body p-3">
             <div class="row error"> <!-- ESPACIO ERROR -->
               <div class="col-sm-12">
-                <span class="errorAlert d-none">
+                <span id="mensajeFaltaInput">
                   <!-- AQUI ESPACIO PARA ERROR EN CASO DE NECESITARLO D-NONE DE MOMENTO-->
                   <div class="alert alert-danger" role="alert">
                     Some fields are missing.
@@ -80,8 +80,8 @@
                 <label for="payment-type" class="form-label">We accept: </label>
                 <div class="bg-secondary rounded d-flex justify-content-between p-2">
                   <div>
-                    <input class="cardtype" type="radio" name="cardtype" value="" /> <i class="fa-brands fa-cc-visa"
-                      style="color: #ffffff;"></i>
+                    <input class="cardtype" type="radio" id="card-type" name="cardtype" value="" required /> <i
+                      class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
                   </div>
                   <div>
                     <input type="radio" name="cardtype" value="" /> <i class="fa-brands fa-cc-mastercard"
@@ -110,8 +110,8 @@
                 <div class="col-2 d-flex">
                   <button data-res="<?php echo $sum; ?>" type="reset"
                     class="btn btn-secondary m-1 w-100 fw-bold">Cancel</button>
-                  <button data-res="<?php echo $sum; ?>" type="submit"
-                    class="btn btn-primary m-1 w-100 fw-bold">Send</button>
+                  <button data-res="<?php echo $sum; ?>" type="submit" class="btn btn-primary m-1 w-100 fw-bold"
+                    id="btnValidar">Send</button>
                 </div>
               </div>
             </div>
